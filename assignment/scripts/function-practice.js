@@ -14,32 +14,38 @@ console.log('Test - should say "Hello World!"', hello());
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
-function helloName( name ) {
-  return;
+function helloName( Badra ) {
+  return 'Hello,' + Badra;
 }
 // Remember to call the function to test
-
+console.log('Personalized hello:', helloName('Badra'));
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
+function addNumbers( firstNumber, secondNumber) {
+  let answer= firstNumber + secondNumber;
+  return answer;
   // return firstNumber + secondNumber;
 }
-
+console.log( addNumbers(4,6) );
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree( firstNumber, secondNumber, thirdnumber){
+let result= firstNumber * secondNumber * thirdnumber;
+return result;
 }
-
+console.log('multiply da number:', multiplyThree (1,4,9) );
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
+    return true;
   }
-    return;
+
+    return false;
 }
+
+console.log( ' result:', isPositive (14) );
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
@@ -49,16 +55,29 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast( array ) {
-
+let animals= ['dogs', 'cats', 'birds', 'rabbits']
+function getLast( animals ) {
+  if(animals.length>0) {
+    return animals[animals.length-1]; }
+else if (animals.length===0){
+  return animals[0]; }
+else {
+  return 'undefined'; }
 }
+console.log( getLast (animals));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
-  
+  for (let i = 0; i < array.length; i++ ) {
+    if(value === array[i]) {
+      return true;
+ }
 }
+    return false; 
+  }
+console.log(find,('dogs', animals)); 
 
 // ----------------------
 // Stretch Goals
